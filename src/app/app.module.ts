@@ -6,12 +6,14 @@ import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 import { AircraftSelectionComponent } from './aircraft-selection/aircraft-selection.component';
+import { ElectronicFlightBagComponent } from './electronic-flight-bag/electronic-flight-bag.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     PageNotFoundComponent,
-    AircraftSelectionComponent
+    AircraftSelectionComponent,
+    ElectronicFlightBagComponent
   ],
   imports: [
     BrowserModule,
