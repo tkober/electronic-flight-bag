@@ -1,0 +1,18 @@
+div.wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+
+div.content {
+    width: 40%;
+
+    mat-spinner {
+        margin: 0 auto;
+    }
+
+    mat-form-field {
+        width: 100%;
+    }
+}

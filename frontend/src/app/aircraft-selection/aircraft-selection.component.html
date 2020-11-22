@@ -1,3 +1,58 @@
-<p>Select an Aircraft</p>
+<div class="wrapper">
+    <div class="content">
 
-<a href="/electronic-flight-bag">Select</a>
+        <mat-spinner *ngIf="loading"></mat-spinner>
+
+        <mat-card *ngIf="!loading">
+            <div>
+                <h2>Pick an Aircraft</h2>
+                <mat-form-field appearance="fill">
+                    <mat-label>Aircraft</mat-label>
+                    <mat-select [(ngModel)]="selectedAircarft" name="aircraft">
+                        <mat-option *ngFor="let aircraft of aircrafts" [value]="aircraft">
+                            {{aircraft.name}}
+                        </mat-option>
+                    </mat-select>
+                </mat-form-field>
+            </div>
+
+            <div *ngIf="selectedAircarft">
+                <h4>{{ selectedAircarft.name }}</h4>
+
+                <mat-list>
+
+                    <mat-list-item>
+                        <div mat-line>manufacturer</div>
+                        <div mat-line>{{ selectedAircarft.manufacturer }}</div>
+                    </mat-list-item>
+
+                    <mat-list-item>
+                        <div mat-line>model</div>
+                        <div mat-line>{{ selectedAircarft.model }}</div>
+                    </mat-list-item>
+
+                    <mat-list-item>
+                        <div mat-line>icaoCode</div>
+                        <div mat-line>{{ selectedAircarft.icaoCode }}</div>
+                    </mat-list-item>
+
+                    <mat-list-item>
+                        <div mat-line>flightCrew</div>
+                        <div mat-line>{{ selectedAircarft.flightCrew }}</div>
+                    </mat-list-item>
+
+                </mat-list>
+
+            </div>
+
+            <button
+                mat-flat-button
+                color="primary"
+                [disabled]="!selectedAircarft"
+            >
+                Select
+            </button>
+        </mat-card>
+
+    </div>
+</div>

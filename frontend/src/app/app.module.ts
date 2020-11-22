@@ -10,7 +10,14 @@ import {ElectronicFlightBagComponent} from './electronic-flight-bag/electronic-f
 import {MatTabsModule} from '@angular/material/tabs';
 import {MatToolbarModule} from '@angular/material/toolbar';
 import {MatIconModule} from '@angular/material/icon';
-import {MatButtonModule} from "@angular/material/button";
+import {MatButtonModule} from '@angular/material/button';
+import {AircraftService} from './services/aircraft.service';
+import {MatProgressSpinnerModule} from "@angular/material/progress-spinner";
+import {MatFormFieldModule} from "@angular/material/form-field";
+import {MatSelectModule} from "@angular/material/select";
+import {FormsModule} from "@angular/forms";
+import {MatCardModule} from "@angular/material/card";
+import {MatListModule} from "@angular/material/list";
 
 @NgModule({
   declarations: [
@@ -26,9 +33,15 @@ import {MatButtonModule} from "@angular/material/button";
         MatTabsModule,
         MatToolbarModule,
         MatIconModule,
-        MatButtonModule
+        MatButtonModule,
+        MatProgressSpinnerModule,
+        MatFormFieldModule,
+        MatSelectModule,
+        FormsModule,
+        MatCardModule,
+        MatListModule
     ],
-  providers: [],
+  providers: [AircraftService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
